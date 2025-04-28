@@ -1,38 +1,7 @@
-// import './ReportsTotalExpenses.css';
-// import { useState } from 'react';
-// import { useContext } from 'react';
-// import { UserContext } from '../context/userContext';
-
-// function ReportsTotalExpenses() {
-//     const { user } = useContext(UserContext);
-
-//     const [total, setTotal] = useState('');
-//     return (
-//         <div className="total-income-container">
-//             <h1>Total de Egresos</h1>
-//             <p>{user.nombre || 'Cargando...'}, el total de egresos en tu cuenta:</p>
-
-//             <div className="input-group">
-//                 <label>Total</label>
-//                 <input
-//                     type="text"
-//                     id="total"
-//                     value={total}
-//                     readOnly={true}
-//                 />
-//             </div>
-//         </div>
-//     );
-// }
-
-// export default ReportsTotalExpenses;
-
-
-
+import React, { useState, useEffect, useContext } from 'react';
 import './ReportsTotalExpenses.css';
-import { useState, useEffect, useContext } from 'react';
 import { UserContext } from '../context/userContext';
-import { getReportTotalOutcome } from '../requests/getTotalOutCome';
+import { getReportTotalOutcome } from '../requests/getTotalOutcome';
 
 function ReportsTotalOutcome() {
     const { user } = useContext(UserContext);

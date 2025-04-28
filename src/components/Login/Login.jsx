@@ -71,15 +71,14 @@ function Login() {
     return (
         <div className='father-container-login'>
             <div className="login-container">
-                {/* <HeaderLogSign /> */}
                 <h2>¡Hola!</h2>
                 <p>Completa los campos requeridos</p>
                 <form onSubmit={handleLogin}>
-
                     <MdOutlinePhoneIphone />
                     <div className="input-container">
-                        <label> Usuario</label>
+                        <label htmlFor="accountNumber"> Usuario</label>
                         <input
+                            id="accountNumber"
                             className='input-login'
                             type="text"
                             name="accountNumber"
@@ -91,8 +90,9 @@ function Login() {
 
                     <RiLockPasswordFill />
                     <div className="input-container">
-                        <label>Contraseña</label>
+                        <label htmlFor="password">Contraseña</label>
                         <input
+                            id="password"
                             className='input-login'
                             type="password"
                             name="password"
@@ -101,7 +101,7 @@ function Login() {
                             placeholder="Contraseña"
                         />
                     </div>
-                    <button type="submit" className="login-button" >
+                    <button type="submit" className="login-button">
                         {loading ? 'Verificando...' : 'Iniciar'}
                     </button>
                 </form>
@@ -110,28 +110,6 @@ function Login() {
             </div>
         </div>
     );
-};
+}
 
-
-
-// <div>
-//     <h2>Login</h2>
-//     <form onSubmit={handleSubmit}>
-//         <label>User</label>
-//         <input
-//             type="text"
-//             placeholder="User"
-//             value={user}
-//             onChange={(e) => setUser(e.target.value)}
-//         />
-//         <input
-//             type="password"
-//             placeholder="Password"
-//             value={password}
-//             onChange={(e) => setPassword(e.target.value)}
-//         />
-//         <button type="submit">Iniciar</button>
-//     </form>
-
-// </div>
-export default Login
+export default Login;

@@ -120,8 +120,9 @@ function Register() {
                         />
                     </div>
                     <div className="input-container">
-                        <label className='label-register'>Tipo de cuenta</label>
+                        <label className='label-register' htmlFor="accountType">Tipo de cuenta</label>
                         <select
+                            id="accountType"
                             name="type"
                             value={registerData.type}
                             onChange={handleChange}

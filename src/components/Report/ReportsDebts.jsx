@@ -1,36 +1,5 @@
-// import './ReportsDebts.css';
-// import { useState } from 'react';
-// import { useContext } from 'react';
-// import { UserContext } from '../context/userContext';
-
-// function ReportsDebts() {
-
-//     const { user } = useContext(UserContext);
-//     const [total, setTotal] = useState('');
-//     return (
-//         <div className="total-income-container">
-//             <h1>Total Deudas</h1>
-//             <p>{user.nombre || 'Cargando...'}, el total de deudas asociadas a tu cuenta:</p>
-
-//             <div className="input-group">
-//                 <label>Total</label>
-//                 <input
-//                     type="text"
-//                     id="total"
-//                     value={total}
-//                     readOnly={true}
-//                 />
-//             </div>
-//         </div>
-//     )
-// }
-
-// export default ReportsDebts;
-
-
-
+import React, { useState, useEffect, useContext } from 'react';
 import './ReportsDebts.css';
-import { useState, useEffect, useContext } from 'react';
 import { UserContext } from '../context/userContext';
 import { getReportTotalDebts } from '../requests/getTotalDebts';
 

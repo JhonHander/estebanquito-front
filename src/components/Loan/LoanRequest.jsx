@@ -21,34 +21,30 @@ function loanRequest() {
 
         const confirmLoan = window.confirm('¿Estás seguro de solicitar el préstamo?');
         if (confirmLoan) {
-            //mostrar indicador de carga
             setLoading(true);
-            // console.log('Solicitando préstamo:', loanData);
-
-            const result = await askForLoan(loanData.amount, loanData.term);
-
-            // console.log('Resultado:', result);
-
-            setTimeout(() => {
+            try {
+                await askForLoan(loanData.amount, loanData.term);
                 alert(`Has solicitado un préstamo de $${loanData.amount} a pagar en ${loanData.term}.`);
-                setLoading(false);
-                // console.log('Préstamo solicitado:', loanData);
                 setLoanData({ amount: '', term: '' });
+            } catch (error) {
+                console.error('Error al solicitar el préstamo:', error);
+                alert('Hubo un error al procesar tu solicitud');
+            } finally {
+                setLoading(false);
             }
-                , 1500);
         }
     }
 
     const validate = () => {
-        if (loanData.amount === '' || loanData.term === '') {
-            alert('Por favor, complete todos los campos');
-            return false;
-        }
         if (loanData.amount < 0) {
             alert('Por favor, ingrese un monto válido');
             return false;
         }
-        return true
+        if (loanData.amount === '' || loanData.term === '') {
+            alert('Por favor, complete todos los campos');
+            return false;
+        }
+        return true;
     }
 
     return (
@@ -80,11 +76,9 @@ function loanRequest() {
                 <option value="8">8 semanas</option>
             </select>
 
-
             <button onClick={handleConfirm}>
                 {loading ? 'Cargando...' : 'Solicitar préstamo'}
             </button>
-
         </div>
     )
 }

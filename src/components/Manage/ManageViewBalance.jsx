@@ -7,19 +7,23 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 
 function ManageViewBalance() {
-
     const [userData, setData] = useState([]);
 
     useEffect(() => {
         const fetchUser = async () => {
-            const getData = await getUserInfo();
-            const type = await getData.tipo;
-            const accountNumber = await getData.numero_cuenta;
-            const amount = await getData.saldo;
-            if (accountNumber && type) {
-                setData([
-                    { type: type, accountNumber: accountNumber, amount: amount },
-                ]);
+            try {
+                const getData = await getUserInfo();
+                const type = getData?.tipo;
+                const accountNumber = getData?.numero_cuenta;
+                const amount = getData?.saldo;
+                if (accountNumber && type) {
+                    setData([
+                        { type: type, accountNumber: accountNumber, amount: amount },
+                    ]);
+                }
+            } catch (error) {
+                console.error('Error al obtener datos del usuario:', error);
+                setData([]); // Aseguramos que userData esté vacío en caso de error
             }
         };
         fetchUser();

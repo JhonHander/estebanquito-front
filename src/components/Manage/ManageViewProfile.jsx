@@ -7,19 +7,30 @@ import { currrentAccount } from "../requests/jwtManage";
 import { updateUserInfo } from "../requests/updateUserInfo";
 
 function manageViewProfile() {
-
     const [profileData, setProfileData] = useState({});
     const [isEditing, setIsEditing] = useState(false);
+    const [error, setError] = useState(null);
 
     useEffect(() => {
         const fetchUser = async () => {
-            const getData = await getUserInfo();
-            setProfileData({
-                name: getData.nombre,
-                email: getData.email,
-                accountNumber: getData.numero_cuenta,
-                accountType: getData.tipo,
-            });
+            try {
+                const getData = await getUserInfo();
+                setProfileData({
+                    name: getData?.nombre || '',
+                    email: getData?.email || '',
+                    accountNumber: getData?.numero_cuenta || '',
+                    accountType: getData?.tipo || '',
+                });
+            } catch (error) {
+                console.error('Error al obtener datos del usuario:', error);
+                setError(error.message);
+                setProfileData({
+                    name: '',
+                    email: '',
+                    accountNumber: '',
+                    accountType: '',
+                });
+            }
         };
         fetchUser();
     }, []);
@@ -65,6 +76,7 @@ function manageViewProfile() {
     return (
         <div className="profile-container" >
             <h1>Detalle perfil</h1>
+            {error && <div className="error-message">Error: {error}</div>}
             <div className="profile-details">
                 <label>
                     Nombre:

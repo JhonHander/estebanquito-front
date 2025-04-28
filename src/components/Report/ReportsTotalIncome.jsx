@@ -1,61 +1,11 @@
-// import './ReportsTotalIncome.css';
-// import { NavLink } from 'react-router-dom';
-// import { useState } from 'react';
-// import { useContext } from 'react';
-// import { UserContext } from '../context/userContext';
-// import { getReportTotalIncome } from '../requests/getTotalIncome';
-// import { useEffect } from 'react';
-
-// function ReportsTotalIncome() {
-
-//     const { user } = useContext(UserContext);
-
-//     const [total, setTotal] = useState('');
-
-
-//     useEffect(() => {
-
-//         setTimeout(() => {
-//             const result = async () => {
-//                 const data = await getReportTotalIncome();
-//                 setTotal(data.totalIncome);
-//                 console.log(data.totalIncome);
-//             }
-//             result();
-//         }, 1000);
-
-//     }
-//         , []);
-
-//     return (
-//         <div className="total-income-container">
-//             <h1>Total Ingresos</h1>
-//             <p>{user.nombre || 'Cargando...'}, en total ha ingresado a tu cuenta:</p>
-
-//             <div className="input-group">
-//                 <label>Total</label>
-//                 <input
-//                     type="text"
-//                     id="total"
-//                     value={total || 'Cargando...'}
-//                     readOnly={true}
-//                 />
-//             </div>
-//         </div>
-//     );
-// }
-
-// export default ReportsTotalIncome;
-
+import React, { useState, useEffect, useContext } from 'react';
 import './ReportsTotalIncome.css';
-import { NavLink } from 'react-router-dom';
-import { useState, useEffect, useContext } from 'react';
 import { UserContext } from '../context/userContext';
 import { getReportTotalIncome } from '../requests/getTotalIncome';
 
 function ReportsTotalIncome() {
     const { user } = useContext(UserContext);
-    const [total, setTotal] = useState(null); // Usa null para indicar que el dato aún no se ha cargado.
+    const [total, setTotal] = useState(null);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {

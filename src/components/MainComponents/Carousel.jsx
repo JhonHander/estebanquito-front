@@ -6,8 +6,8 @@ import CarouselInterface from "./CarouselInterface";
 import { getToken } from '../requests/jwtManage';
 import "./Carousel.css";
 import reportesBoton from '../../assets/imagen-interfaz-2.png'
-import { FaArrowAltCircleRight } from "react-icons/fa";
-import { FaArrowAltCircleLeft } from "react-icons/fa";
+import { FaCircleChevronRight } from "react-icons/fa";
+import { FaCircleChevronLeft } from "react-icons/fa";
 import transferirBoton from '../../assets/imagen-interfaz-1.png'
 import prestamoBoton from '../../assets/imagen-interfaz-3-prueba.png'
 
@@ -57,12 +57,22 @@ function Carousel() {
 
     return (
         <div className="carousel-container">
-            <button className="arrow left-arrow" onClick={prevSlide}>
-                <FaArrowAltCircleLeft />
+            <button 
+                className="arrow left-arrow"
+                data-testid="prev-button"
+                onClick={prevSlide}
+            >
+                <FaCircleChevronLeft />
             </button>
-            <CarouselInterface {...interfaces[currentIndex]} />
-            <button className="arrow right-arrow" onClick={nextSlide}>
-                <FaArrowAltCircleRight />
+            <div className="carousel-interface">
+                <CarouselInterface {...interfaces[currentIndex]} />
+            </div>
+            <button 
+                className="arrow right-arrow"
+                data-testid="next-button"
+                onClick={nextSlide}
+            >
+                <FaCircleChevronRight />
             </button>
         </div>
     );

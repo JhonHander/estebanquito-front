@@ -2,5 +2,5 @@ projectKey=Estebanquito-Frontend
 serverUrl=http://localhost:9000
 serverVersion=25.4.0.105899
 dashboardUrl=http://localhost:9000/dashboard?id=Estebanquito-Frontend
-ceTaskId=6233e569-e80f-46b7-8130-6ccee07ea498
-ceTaskUrl=http://localhost:9000/api/ce/task?id=6233e569-e80f-46b7-8130-6ccee07ea498
+ceTaskId=27c380d0-5271-4b3b-afdc-e5a8a5067813
+ceTaskUrl=http://localhost:9000/api/ce/task?id=27c380d0-5271-4b3b-afdc-e5a8a5067813

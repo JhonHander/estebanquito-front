@@ -3,7 +3,7 @@ import { useState } from "react";
 import "./LoanRequest.css";
 import { askForLoan } from "../requests/askForLoan";
 
-function loanRequest() {
+function LoanRequest() {
     const [loanData, setLoanData] = useState({
         amount: '',
         term: '',
@@ -83,4 +83,4 @@ function loanRequest() {
     )
 }
 
-export default loanRequest;
+export default LoanRequest;

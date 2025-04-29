@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import { currrentAccount } from "../requests/jwtManage";
 import { updateUserInfo } from "../requests/updateUserInfo";
 
-function manageViewProfile() {
+function ManageViewProfile() {
     const [profileData, setProfileData] = useState({});
     const [isEditing, setIsEditing] = useState(false);
     const [error, setError] = useState(null);
@@ -143,4 +143,4 @@ function manageViewProfile() {
     )
 }
 
-export default manageViewProfile;
+export default ManageViewProfile;

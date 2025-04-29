@@ -8,7 +8,7 @@ import { getTransactions } from '../requests/getTransactions';
 import { getToken } from '../requests/jwtManage';
 import { useNavigate } from 'react-router-dom';
 
-function manageViewTransactions() {
+function ManageViewTransactions() {
     const navigate = useNavigate();
     const [movementData, setMovementData] = useState([]);
 
@@ -79,4 +79,4 @@ function manageViewTransactions() {
     );
 }
 
-export default manageViewTransactions;
+export default ManageViewTransactions;

@@ -6,7 +6,7 @@ import { UserContext } from "../context/userContext";
 import { tranferMoney } from "../requests/transferMoney";
 import { getUserInfo } from "../requests/getUserInfo";
 
-function transactionsTransferMoney() {
+function TransactionsTransferMoney() {
     // const { user } = useContext(UserContext);
 
     const [transferData, setTransferData] = useState({
@@ -127,4 +127,4 @@ function transactionsTransferMoney() {
     );
 }
 
-export default transactionsTransferMoney;
+export default TransactionsTransferMoney;

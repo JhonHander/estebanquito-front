@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+  <file path="jest tests">
+    <testCase name="ManageViewBalance Component - ManageViewBalance Component" duration="175"/>
+    <testCase name="ManageViewBalance Component - ManageViewBalance Component" duration="4388"/>
+    <testCase name="ManageViewBalance Component - ManageViewBalance Component" duration="26"/>
+    <testCase name="ManageViewBalance Component - ManageViewBalance Component" duration="14"/>
+    <testCase name="ManageViewBalance Component - ManageViewBalance Component" duration="116"/>
+  </file>
+  <file path="src/__tests__/components/ManageMovements.test.jsx">
+    <testCase name="ManageMovements Component - ManageMovements Component" duration="173"/>
+    <testCase name="ManageMovements Component - ManageMovements Component" duration="35"/>
+    <testCase name="ManageMovements Component - ManageMovements Component" duration="4645"/>
+    <testCase name="ManageMovements Component - ManageMovements Component" duration="10"/>
+    <testCase name="ManageMovements Component - ManageMovements Component" duration="51"/>
+    <testCase name="ManageMovements Component - ManageMovements Component" duration="17"/>
+  </file>
+  <file path="src/__tests__/components/LoanRequest.test.jsx">
+    <testCase name="LoanRequest Component - LoanRequest Component" duration="143"/>
+    <testCase name="LoanRequest Component - LoanRequest Component" duration="28"/>
+    <testCase name="LoanRequest Component - LoanRequest Component" duration="17"/>
+    <testCase name="LoanRequest Component - LoanRequest Component" duration="14"/>
+    <testCase name="LoanRequest Component - LoanRequest Component" duration="36"/>
+    <testCase name="LoanRequest Component - LoanRequest Component" duration="39"/>
+    <testCase name="LoanRequest Component - LoanRequest Component" duration="4430"/>
+  </file>
+  <file path="src/__tests__/components/TransactionDeposit.test.jsx">
+    <testCase name="TransactionsDeposit Component - TransactionsDeposit Component" duration="118"/>
+    <testCase name="TransactionsDeposit Component - TransactionsDeposit Component" duration="18"/>
+    <testCase name="TransactionsDeposit Component - TransactionsDeposit Component" duration="9"/>
+    <testCase name="TransactionsDeposit Component - TransactionsDeposit Component" duration="8"/>
+    <testCase name="TransactionsDeposit Component - TransactionsDeposit Component" duration="25"/>
+    <testCase name="TransactionsDeposit Component - TransactionsDeposit Component" duration="4823"/>
+    <testCase name="TransactionsDeposit Component - TransactionsDeposit Component" duration="9"/>
+    <testCase name="TransactionsDeposit Component - TransactionsDeposit Component" duration="8"/>
+  </file>
+  <file path="src/__tests__/components/ReportsTotalExpenses.test.jsx">
+    <testCase name="ReportsTotalOutcome Component - ReportsTotalOutcome Component" duration="312"/>
+    <testCase name="ReportsTotalOutcome Component - ReportsTotalOutcome Component" duration="9"/>
+    <testCase name="ReportsTotalOutcome Component - ReportsTotalOutcome Component" duration="4511"/>
+    <testCase name="ReportsTotalOutcome Component - ReportsTotalOutcome Component" duration="30"/>
+    <testCase name="ReportsTotalOutcome Component - ReportsTotalOutcome Component" duration="63"/>
+  </file>
+  <file path="src/__tests__/components/ReportsDebts.test.jsx">
+    <testCase name="ReportsDebts Component - ReportsDebts Component" duration="117"/>
+    <testCase name="ReportsDebts Component - ReportsDebts Component" duration="13"/>
+    <testCase name="ReportsDebts Component - ReportsDebts Component" duration="4316"/>
+    <testCase name="ReportsDebts Component - ReportsDebts Component" duration="34"/>
+    <testCase name="ReportsDebts Component - ReportsDebts Component" duration="47"/>
+  </file>
+  <file path="src/__tests__/components/Register.test.jsx">
+    <testCase name="Register Component - Register Component" duration="68"/>
+    <testCase name="Register Component - Register Component" duration="26"/>
+    <testCase name="Register Component - Register Component" duration="14"/>
+    <testCase name="Register Component - Register Component" duration="5123">
+      <failure message="Error: expect(jest.fn()).toHaveBeenCalledWith(...expected)
+
+Expected: &amp;quot;/login&amp;quot;
+
+Number of calls: 0
+
+Ignored nodes: comments, script, style
+&amp;lt;html&amp;gt;
+  &amp;lt;head /&amp;gt;
+  &amp;lt;body&amp;gt;
+    &amp;lt;div&amp;gt;
+      &amp;lt;div
+        class=&amp;quot;father-container-register&amp;quot;
+      &amp;gt;
+        &amp;lt;div
+          class=&amp;quot;register-container&amp;quot;
+        &amp;gt;
+          &amp;lt;h2&amp;gt;
+            Registro
+          &amp;lt;/h2&amp;gt;
+          &amp;lt;p&amp;gt;
+            ¡Es muy fácil!
+          &amp;lt;/p&amp;gt;
+          &amp;lt;p
+            class=&amp;quot;message&amp;quot;
+          &amp;gt;
+            Registro exitoso bienvenido a Estebanquito
+          &amp;lt;/p&amp;gt;
+          &amp;lt;form&amp;gt;
+            &amp;lt;div
+              class=&amp;quot;input-container&amp;quot;
+            &amp;gt;
+              &amp;lt;input
+                class=&amp;quot;input-login&amp;quot;
+                name=&amp;quot;accountNumber&amp;quot;
+                placeholder=&amp;quot;Ingrese su número de celular&amp;quot;
+                type=&amp;quot;text&amp;quot;
+                value=&amp;quot;&amp;quot;
+              /&amp;gt;
+            &amp;lt;/div&amp;gt;
+            &amp;lt;div
+              class=&amp;quot;input-container&amp;quot;
+            &amp;gt;
+              &amp;lt;input
+                class=&amp;quot;input-login&amp;quot;
+                name=&amp;quot;name&amp;quot;
+                placeholder=&amp;quot;Ingrese su nombre&amp;quot;
+                type=&amp;quot;text&amp;quot;
+                value=&amp;quot;&amp;quot;
+              /&amp;gt;
+            &amp;lt;/div&amp;gt;
+            &amp;lt;div
+              class=&amp;quot;input-container&amp;quot;
+            &amp;gt;
+              &amp;lt;input
+                class=&amp;quot;input-login&amp;quot;
+                name=&amp;quot;email&amp;quot;
+                placeholder=&amp;quot;Ingrese su email&amp;quot;
+                type=&amp;quot;email&amp;quot;
+                value=&amp;quot;&amp;quot;
+              /&amp;gt;
+            &amp;lt;/div&amp;gt;
+            &amp;lt;div
+              class=&amp;quot;input-container&amp;quot;
+            &amp;gt;
+              &amp;lt;input
+                class=&amp;quot;input-login&amp;quot;
+                name=&amp;quot;password&amp;quot;
+                placeholder=&amp;quot;Ingrese su contraseña&amp;quot;
+                type=&amp;quot;password&amp;quot;
+                value=&amp;quot;&amp;quot;
+              /&amp;gt;
+            &amp;lt;/div&amp;gt;
+            &amp;lt;div
+              class=&amp;quot;input-container&amp;quot;
+            &amp;gt;
+              &amp;lt;label
+                class=&amp;quot;label-register&amp;quot;
+                for=&amp;quot;accountType&amp;quot;
+              &amp;gt;
+                Tipo de cuenta
+              &amp;lt;/label&amp;gt;
+              &amp;lt;select
+                class=&amp;quot;input-select&amp;quot;
+                id=&amp;quot;accountType&amp;quot;
+                name=&amp;quot;type&amp;quot;
+              &amp;gt;
+                &amp;lt;option
+                  value=&amp;quot;Ahorros&amp;quot;
+                &amp;gt;
+                  Ahorros
+                &amp;lt;/option&amp;gt;
+                &amp;lt;option
+                  value=&amp;quot;Corriente&amp;quot;
+                &amp;gt;
+                  Corriente
+                &amp;lt;/option&amp;gt;
+              &amp;lt;/select&amp;gt;
+            &amp;lt;/div&amp;gt;
+            &amp;lt;button
+              class=&amp;quot;login-button&amp;quot;
+              type=&amp;quot;submit&amp;quot;
+            &amp;gt;
+              Registrarse
+            &amp;lt;/button&amp;gt;
+          &amp;lt;/form&amp;gt;
+          &amp;lt;p&amp;gt;
+            ¿Ya estás registrado? 
+            &amp;lt;a
+              href=&amp;quot;/login&amp;quot;
+            &amp;gt;
+              Iniciar Sesión
+            &amp;lt;/a&amp;gt;
+          &amp;lt;/p&amp;gt;
+        &amp;lt;/div&amp;gt;
+      &amp;lt;/div&amp;gt;
+    &amp;lt;/div&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+    at toHaveBeenCalledWith (C:\Users\MSI\OneDrive - IUE\Codes\Web\frontend\estebanquito-front-end\src\__tests__\components\Register.test.jsx:77:34)
+    at runWithExpensiveErrorDiagnosticsDisabled (C:\Users\MSI\OneDrive - IUE\Codes\Web\frontend\estebanquito-front-end\node_modules\@testing-library\dom\dist\config.js:47:12)
+    at checkCallback (C:\Users\MSI\OneDrive - IUE\Codes\Web\frontend\estebanquito-front-end\node_modules\@testing-library\dom\dist\wait-for.js:124:77)
+    at checkRealTimersCallback (C:\Users\MSI\OneDrive - IUE\Codes\Web\frontend\estebanquito-front-end\node_modules\@testing-library\dom\dist\wait-for.js:118:16)
+    at Timeout.task [as _onTimeout] (C:\Users\MSI\OneDrive - IUE\Codes\Web\frontend\estebanquito-front-end\node_modules\jsdom\lib\jsdom\browser\Window.js:520:19)
+    at listOnTimeout (node:internal/timers:594:17)
+    at processTimers (node:internal/timers:529:7)">Test failed</failure>
+    </testCase>
+    <testCase name="Register Component - Register Component" duration="37"/>
+    <testCase name="Register Component - Register Component" duration="41"/>
+    <testCase name="Register Component - Register Component" duration="10"/>
+    <testCase name="Register Component - Register Component" duration="37"/>
+  </file>
+  <file path="src/__tests__/components/ReportsTotalIncome.test.jsx">
+    <testCase name="ReportsTotalIncome Component - ReportsTotalIncome Component" duration="100"/>
+    <testCase name="ReportsTotalIncome Component - ReportsTotalIncome Component" duration="8"/>
+    <testCase name="ReportsTotalIncome Component - ReportsTotalIncome Component" duration="4658"/>
+    <testCase name="ReportsTotalIncome Component - ReportsTotalIncome Component" duration="25"/>
+    <testCase name="ReportsTotalIncome Component - ReportsTotalIncome Component" duration="64"/>
+  </file>
+  <file path="src/__tests__/components/TransactionWithdraw.test.jsx">
+    <testCase name="TransactionsWithdraw Component - TransactionsWithdraw Component" duration="297"/>
+    <testCase name="TransactionsWithdraw Component - TransactionsWithdraw Component" duration="27"/>
+    <testCase name="TransactionsWithdraw Component - TransactionsWithdraw Component" duration="28"/>
+    <testCase name="TransactionsWithdraw Component - TransactionsWithdraw Component" duration="20"/>
+    <testCase name="TransactionsWithdraw Component - TransactionsWithdraw Component" duration="4629"/>
+    <testCase name="TransactionsWithdraw Component - TransactionsWithdraw Component" duration="19"/>
+  </file>
+  <file path="src/__tests__/components/TransactionTransferMoney.test.jsx">
+    <testCase name="TransactionsTransferMoney Component - TransactionsTransferMoney Component" duration="256"/>
+    <testCase name="TransactionsTransferMoney Component - TransactionsTransferMoney Component" duration="18"/>
+    <testCase name="TransactionsTransferMoney Component - TransactionsTransferMoney Component" duration="20"/>
+    <testCase name="TransactionsTransferMoney Component - TransactionsTransferMoney Component" duration="16"/>
+    <testCase name="TransactionsTransferMoney Component - TransactionsTransferMoney Component" duration="4561"/>
+    <testCase name="TransactionsTransferMoney Component - TransactionsTransferMoney Component" duration="21"/>
+    <testCase name="TransactionsTransferMoney Component - TransactionsTransferMoney Component" duration="11"/>
+    <testCase name="TransactionsTransferMoney Component - TransactionsTransferMoney Component" duration="3"/>
+  </file>
+  <file path="src/__tests__/components/Login.test.jsx">
+    <testCase name="Login Component - Login Component" duration="339"/>
+    <testCase name="Login Component - Login Component" duration="22"/>
+    <testCase name="Login Component - Login Component" duration="115"/>
+    <testCase name="Login Component - Login Component" duration="4758"/>
+    <testCase name="Login Component - Login Component" duration="96"/>
+    <testCase name="Login Component - Login Component" duration="94"/>
+    <testCase name="Login Component - Login Component" duration="7"/>
+  </file>
+  <file path="src/__tests__/components/ManageViewProfile.test.jsx">
+    <testCase name="ManageViewProfile Component - ManageViewProfile Component" duration="78"/>
+    <testCase name="ManageViewProfile Component - ManageViewProfile Component" duration="42"/>
+    <testCase name="ManageViewProfile Component - ManageViewProfile Component" duration="4385"/>
+    <testCase name="ManageViewProfile Component - ManageViewProfile Component" duration="26"/>
+    <testCase name="ManageViewProfile Component - ManageViewProfile Component" duration="37"/>
+    <testCase name="ManageViewProfile Component - ManageViewProfile Component" duration="38"/>
+    <testCase name="ManageViewProfile Component - ManageViewProfile Component" duration="38"/>
+  </file>
+</testExecutions>

@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="77" failures="1" errors="0" time="11.444">
+  <testsuite name="src\__tests__\components\ManageMovements.test.jsx" errors="0" failures="0" skipped="0" timestamp="2025-04-29T22:59:38" time="7.456" tests="6">
+    <testcase classname="ManageMovements Component" name="renders movements table with correct headers" time="0.099">
+    </testcase>
+    <testcase classname="ManageMovements Component" name="fetches and displays transaction data correctly" time="0.029">
+    </testcase>
+    <testcase classname="ManageMovements Component" name="applies correct CSS classes based on transaction type" time="4.277">
+    </testcase>
+    <testcase classname="ManageMovements Component" name="redirects to login when no token is present" time="0.008">
+    </testcase>
+    <testcase classname="ManageMovements Component" name="handles failed transaction fetch" time="0.101">
+    </testcase>
+    <testcase classname="ManageMovements Component" name="renders &quot;Ver Saldo&quot; link correctly" time="0.009">
+    </testcase>
+  </testsuite>
+  <testsuite name="src\__tests__\components\TransactionDeposit.test.jsx" errors="0" failures="0" skipped="0" timestamp="2025-04-29T22:59:38" time="7.685" tests="8">
+    <testcase classname="TransactionsDeposit Component" name="renders correctly" time="0.117">
+    </testcase>
+    <testcase classname="TransactionsDeposit Component" name="handles input change correctly" time="0.015">
+    </testcase>
+    <testcase classname="TransactionsDeposit Component" name="validates empty amount" time="0.01">
+    </testcase>
+    <testcase classname="TransactionsDeposit Component" name="validates negative amount" time="0.009">
+    </testcase>
+    <testcase classname="TransactionsDeposit Component" name="handles successful deposit" time="4.33">
+    </testcase>
+    <testcase classname="TransactionsDeposit Component" name="handles failed deposit" time="0.028">
+    </testcase>
+    <testcase classname="TransactionsDeposit Component" name="cancels deposit when user declines confirmation" time="0.009">
+    </testcase>
+    <testcase classname="TransactionsDeposit Component" name="disables input and button while loading" time="0.01">
+    </testcase>
+  </testsuite>
+  <testsuite name="src\__tests__\components\ManageViewBalance.test.jsx" errors="0" failures="0" skipped="0" timestamp="2025-04-29T22:59:38" time="7.768" tests="5">
+    <testcase classname="ManageViewBalance Component" name="renders initial state correctly" time="0.28">
+    </testcase>
+    <testcase classname="ManageViewBalance Component" name="displays user account information correctly" time="4.446">
+    </testcase>
+    <testcase classname="ManageViewBalance Component" name="handles empty or invalid user data" time="0.021">
+    </testcase>
+    <testcase classname="ManageViewBalance Component" name="renders movements section correctly" time="0.013">
+    </testcase>
+    <testcase classname="ManageViewBalance Component" name="handles API error gracefully" time="0.085">
+    </testcase>
+  </testsuite>
+  <testsuite name="src\__tests__\components\Login.test.jsx" errors="0" failures="0" skipped="0" timestamp="2025-04-29T22:59:38" time="7.848" tests="7">
+    <testcase classname="Login Component" name="renders login form with all elements" time="0.364">
+    </testcase>
+    <testcase classname="Login Component" name="handles input changes correctly" time="0.027">
+    </testcase>
+    <testcase classname="Login Component" name="shows loading state during form submission" time="0.102">
+    </testcase>
+    <testcase classname="Login Component" name="handles successful login correctly" time="4.255">
+    </testcase>
+    <testcase classname="Login Component" name="handles login failure correctly" time="0.1">
+    </testcase>
+    <testcase classname="Login Component" name="handles network error correctly" time="0.099">
+    </testcase>
+    <testcase classname="Login Component" name="validates form before submission" time="0.015">
+    </testcase>
+  </testsuite>
+  <testsuite name="src\__tests__\components\LoanRequest.test.jsx" errors="0" failures="0" skipped="0" timestamp="2025-04-29T22:59:38" time="7.807" tests="7">
+    <testcase classname="LoanRequest Component" name="renders loan request form correctly" time="0.254">
+    </testcase>
+    <testcase classname="LoanRequest Component" name="updates form values when user inputs data" time="0.026">
+    </testcase>
+    <testcase classname="LoanRequest Component" name="validates empty fields" time="0.015">
+    </testcase>
+    <testcase classname="LoanRequest Component" name="validates negative amount" time="0.013">
+    </testcase>
+    <testcase classname="LoanRequest Component" name="submits loan request successfully" time="0.255">
+    </testcase>
+    <testcase classname="LoanRequest Component" name="cancels loan request when user clicks cancel in confirm dialog" time="0.016">
+    </testcase>
+    <testcase classname="LoanRequest Component" name="handles loan request failure correctly" time="4.169">
+    </testcase>
+  </testsuite>
+  <testsuite name="src\__tests__\components\ReportsDebts.test.jsx" errors="0" failures="0" skipped="0" timestamp="2025-04-29T22:59:38" time="8.016" tests="5">
+    <testcase classname="ReportsDebts Component" name="renderiza el componente correctamente" time="0.098">
+    </testcase>
+    <testcase classname="ReportsDebts Component" name="muestra &quot;Cargando...&quot; mientras los datos se están cargando" time="0.009">
+    </testcase>
+    <testcase classname="ReportsDebts Component" name="muestra el total de deudas cuando la API responde exitosamente" time="4.644">
+    </testcase>
+    <testcase classname="ReportsDebts Component" name="muestra &quot;No disponible&quot; cuando hay un error en la API" time="0.027">
+    </testcase>
+    <testcase classname="ReportsDebts Component" name="maneja errores de red correctamente" time="0.063">
+    </testcase>
+  </testsuite>
+  <testsuite name="src\__tests__\components\ReportsTotalExpenses.test.jsx" errors="0" failures="0" skipped="0" timestamp="2025-04-29T22:59:38" time="8.047" tests="5">
+    <testcase classname="ReportsTotalOutcome Component" name="renderiza el componente correctamente" time="0.075">
+    </testcase>
+    <testcase classname="ReportsTotalOutcome Component" name="muestra &quot;Cargando...&quot; mientras los datos se están cargando" time="0.009">
+    </testcase>
+    <testcase classname="ReportsTotalOutcome Component" name="muestra el total de egresos cuando la API responde exitosamente" time="0.13">
+    </testcase>
+    <testcase classname="ReportsTotalOutcome Component" name="muestra &quot;No disponible&quot; cuando hay un error en la API" time="4.175">
+    </testcase>
+    <testcase classname="ReportsTotalOutcome Component" name="maneja errores de red correctamente" time="0.059">
+    </testcase>
+  </testsuite>
+  <testsuite name="src\__tests__\components\TransactionTransferMoney.test.jsx" errors="0" failures="0" skipped="0" timestamp="2025-04-29T22:59:38" time="8.013" tests="8">
+    <testcase classname="TransactionsTransferMoney Component" name="renders transfer money form" time="0.222">
+    </testcase>
+    <testcase classname="TransactionsTransferMoney Component" name="handles input changes correctly" time="0.039">
+    </testcase>
+    <testcase classname="TransactionsTransferMoney Component" name="validates empty fields" time="0.02">
+    </testcase>
+    <testcase classname="TransactionsTransferMoney Component" name="validates invalid amount" time="0.015">
+    </testcase>
+    <testcase classname="TransactionsTransferMoney Component" name="successful transfer flow" time="4.091">
+    </testcase>
+    <testcase classname="TransactionsTransferMoney Component" name="failed transfer flow" time="0.022">
+    </testcase>
+    <testcase classname="TransactionsTransferMoney Component" name="cancel transfer when user declines confirmation" time="0.008">
+    </testcase>
+    <testcase classname="TransactionsTransferMoney Component" name="loads user account number on mount" time="0.008">
+    </testcase>
+  </testsuite>
+  <testsuite name="src\__tests__\components\Register.test.jsx" errors="0" failures="1" skipped="0" timestamp="2025-04-29T22:59:38" time="8.078" tests="8">
+    <testcase classname="Register Component" name="renders register form" time="0.115">
+    </testcase>
+    <testcase classname="Register Component" name="handles input changes" time="0.02">
+    </testcase>
+    <testcase classname="Register Component" name="shows validation error when form is submitted with empty fields" time="0.013">
+    </testcase>
+    <testcase classname="Register Component" name="handles successful registration" time="4.804">
+      <failure>Error: expect(jest.fn()).toHaveBeenCalledWith(...expected)
+
+Expected: &quot;/login&quot;
+
+Number of calls: 0
+
+Ignored nodes: comments, script, style
+&lt;html&gt;
+  &lt;head /&gt;
+  &lt;body&gt;
+    &lt;div&gt;
+      &lt;div
+        class=&quot;father-container-register&quot;
+      &gt;
+        &lt;div
+          class=&quot;register-container&quot;
+        &gt;
+          &lt;h2&gt;
+            Registro
+          &lt;/h2&gt;
+          &lt;p&gt;
+            ¡Es muy fácil!
+          &lt;/p&gt;
+          &lt;p
+            class=&quot;message&quot;
+          &gt;
+            Registro exitoso bienvenido a Estebanquito
+          &lt;/p&gt;
+          &lt;form&gt;
+            &lt;div
+              class=&quot;input-container&quot;
+            &gt;
+              &lt;input
+                class=&quot;input-login&quot;
+                name=&quot;accountNumber&quot;
+                placeholder=&quot;Ingrese su número de celular&quot;
+                type=&quot;text&quot;
+                value=&quot;&quot;
+              /&gt;
+            &lt;/div&gt;
+            &lt;div
+              class=&quot;input-container&quot;
+            &gt;
+              &lt;input
+                class=&quot;input-login&quot;
+                name=&quot;name&quot;
+                placeholder=&quot;Ingrese su nombre&quot;
+                type=&quot;text&quot;
+                value=&quot;&quot;
+              /&gt;
+            &lt;/div&gt;
+            &lt;div
+              class=&quot;input-container&quot;
+            &gt;
+              &lt;input
+                class=&quot;input-login&quot;
+                name=&quot;email&quot;
+                placeholder=&quot;Ingrese su email&quot;
+                type=&quot;email&quot;
+                value=&quot;&quot;
+              /&gt;
+            &lt;/div&gt;
+            &lt;div
+              class=&quot;input-container&quot;
+            &gt;
+              &lt;input
+                class=&quot;input-login&quot;
+                name=&quot;password&quot;
+                placeholder=&quot;Ingrese su contraseña&quot;
+                type=&quot;password&quot;
+                value=&quot;&quot;
+              /&gt;
+            &lt;/div&gt;
+            &lt;div
+              class=&quot;input-container&quot;
+            &gt;
+              &lt;label
+                class=&quot;label-register&quot;
+                for=&quot;accountType&quot;
+              &gt;
+                Tipo de cuenta
+              &lt;/label&gt;
+              &lt;select
+                class=&quot;input-select&quot;
+                id=&quot;accountType&quot;
+                name=&quot;type&quot;
+              &gt;
+                &lt;option
+                  value=&quot;Ahorros&quot;
+                &gt;
+                  Ahorros
+                &lt;/option&gt;
+                &lt;option
+                  value=&quot;Corriente&quot;
+                &gt;
+                  Corriente
+                &lt;/option&gt;
+              &lt;/select&gt;
+            &lt;/div&gt;
+            &lt;button
+              class=&quot;login-button&quot;
+              type=&quot;submit&quot;
+            &gt;
+              Registrarse
+            &lt;/button&gt;
+          &lt;/form&gt;
+          &lt;p&gt;
+            ¿Ya estás registrado? 
+            &lt;a
+              href=&quot;/login&quot;
+            &gt;
+              Iniciar Sesión
+            &lt;/a&gt;
+          &lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+    at toHaveBeenCalledWith (C:\Users\MSI\OneDrive - IUE\Codes\Web\frontend\estebanquito-front-end\src\__tests__\components\Register.test.jsx:77:34)
+    at runWithExpensiveErrorDiagnosticsDisabled (C:\Users\MSI\OneDrive - IUE\Codes\Web\frontend\estebanquito-front-end\node_modules\@testing-library\dom\dist\config.js:47:12)
+    at checkCallback (C:\Users\MSI\OneDrive - IUE\Codes\Web\frontend\estebanquito-front-end\node_modules\@testing-library\dom\dist\wait-for.js:124:77)
+    at checkRealTimersCallback (C:\Users\MSI\OneDrive - IUE\Codes\Web\frontend\estebanquito-front-end\node_modules\@testing-library\dom\dist\wait-for.js:118:16)
+    at Timeout.task [as _onTimeout] (C:\Users\MSI\OneDrive - IUE\Codes\Web\frontend\estebanquito-front-end\node_modules\jsdom\lib\jsdom\browser\Window.js:520:19)
+    at listOnTimeout (node:internal/timers:594:17)
+    at processTimers (node:internal/timers:529:7)</failure>
+    </testcase>
+    <testcase classname="Register Component" name="handles registration error" time="0.054">
+    </testcase>
+    <testcase classname="Register Component" name="handles network error during registration" time="0.032">
+    </testcase>
+    <testcase classname="Register Component" name="handles account type select changes" time="0.01">
+    </testcase>
+    <testcase classname="Register Component" name="resets form fields after successful registration" time="0.019">
+    </testcase>
+  </testsuite>
+  <testsuite name="src\__tests__\components\ReportsTotalIncome.test.jsx" errors="0" failures="0" skipped="0" timestamp="2025-04-29T22:59:38" time="8.069" tests="5">
+    <testcase classname="ReportsTotalIncome Component" name="renderiza el componente correctamente" time="0.075">
+    </testcase>
+    <testcase classname="ReportsTotalIncome Component" name="muestra &quot;Cargando...&quot; mientras los datos se están cargando" time="0.016">
+    </testcase>
+    <testcase classname="ReportsTotalIncome Component" name="muestra el total de ingresos cuando la API responde exitosamente" time="4.302">
+    </testcase>
+    <testcase classname="ReportsTotalIncome Component" name="muestra &quot;No disponible&quot; cuando hay un error en la API" time="0.019">
+    </testcase>
+    <testcase classname="ReportsTotalIncome Component" name="maneja errores de red correctamente" time="0.05">
+    </testcase>
+  </testsuite>
+  <testsuite name="src\__tests__\components\TransactionWithdraw.test.jsx" errors="0" failures="0" skipped="0" timestamp="2025-04-29T22:59:38" time="8.088" tests="6">
+    <testcase classname="TransactionsWithdraw Component" name="renders withdraw form with all elements" time="0.351">
+    </testcase>
+    <testcase classname="TransactionsWithdraw Component" name="generates random PIN on component mount" time="0.145">
+    </testcase>
+    <testcase classname="TransactionsWithdraw Component" name="handles amount input changes" time="0.013">
+    </testcase>
+    <testcase classname="TransactionsWithdraw Component" name="shows alert when attempting to withdraw with invalid amount" time="0.026">
+    </testcase>
+    <testcase classname="TransactionsWithdraw Component" name="processes successful withdrawal" time="4.068">
+    </testcase>
+    <testcase classname="TransactionsWithdraw Component" name="cancels withdrawal when user declines confirmation" time="0.009">
+    </testcase>
+  </testsuite>
+  <testsuite name="src\__tests__\components\ManageViewProfile.test.jsx" errors="0" failures="0" skipped="0" timestamp="2025-04-29T22:59:38" time="8.175" tests="7">
+    <testcase classname="ManageViewProfile Component" name="renders profile view with correct headings and fields" time="0.193">
+    </testcase>
+    <testcase classname="ManageViewProfile Component" name="loads and displays user data correctly" time="0.049">
+    </testcase>
+    <testcase classname="ManageViewProfile Component" name="enables editing mode when edit button is clicked" time="4.188">
+    </testcase>
+    <testcase classname="ManageViewProfile Component" name="validates empty fields when trying to edit" time="0.031">
+    </testcase>
+    <testcase classname="ManageViewProfile Component" name="updates user information successfully" time="0.057">
+    </testcase>
+    <testcase classname="ManageViewProfile Component" name="handles API error gracefully" time="0.045">
+    </testcase>
+    <testcase classname="ManageViewProfile Component" name="cancels editing mode correctly" time="0.034">
+    </testcase>
+  </testsuite>
+</testsuites>

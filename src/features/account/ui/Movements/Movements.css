@@ -1,0 +1,82 @@
+.movements-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 40px;
+    text-align: center;
+    background-color: var(--neutral-light);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.movements-container h1 {
+    text-align: center;
+    color: var(--neutral-dark);
+}
+
+.movements-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+.movements-table caption {
+    background-color: var(--primary-dark);
+    color: var(--neutral-light);
+    font-size: 20px;
+    padding: 10px;
+}
+
+.movements-table th,
+.movements-table td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.movements-table th {
+    background-color: var(--neutral-medium);
+    color: var(--neutral-light);
+}
+
+.movements-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.saldo-transaction {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.to-button {
+    display: flex;
+    background-color: var(--neutral-dark);
+    color: var(--neutral-light);
+    padding: 0.5rem 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.15s;
+    align-items: center;
+    gap: 5px;
+}
+
+.to-button:hover {
+    background-color: var(--neutral-medium);
+}
+
+.movement-red {
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+.movement-green {
+    background-color: rgba(0, 255, 0, 0.1);
+}
+
+.movement-blue {
+    background-color: rgba(0, 0, 255, 0.1);
+}
+
+.movement-yellow {
+    background-color: rgba(255, 255, 0, 0.1);
+}

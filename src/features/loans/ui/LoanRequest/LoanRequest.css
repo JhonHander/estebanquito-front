@@ -1,0 +1,56 @@
+.loan-request-container {
+    width: 600px;
+    margin: 40px auto;
+    padding: 60px;
+    background-color: var(--neutral-light);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.loan-request-container input {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    padding: 10px;
+    margin: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.loan-request-container label {
+    display: grid;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.loan-request-container select {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 83%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.loan-request-container button {
+    background-color: var(--secondary);
+    margin-top: 10px;
+    color: var(--neutral-light);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: large;
+}
+
+.loan-request-container button:hover:not(:disabled) {
+    background-color: var(--secondary-dark);
+}
+
+.loan-request-container button:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}

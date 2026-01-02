@@ -1,0 +1,42 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-dark);
+    padding: 5px 8px;
+    height: 4.5rem;
+}
+
+.header-left .logo {
+    width: auto;
+    height: 4.9rem;
+    cursor: pointer;
+}
+
+.header-center h3 {
+    font-size: 26px;
+    letter-spacing: 0.001em;
+    color: var(--neutral-light);
+}
+
+.logout-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--neutral-medium);
+    border: none;
+    padding: 0.6rem 1.5rem;
+    cursor: pointer;
+    color: var(--neutral-light);
+    border-radius: 15px;
+    font-size: 18px;
+    transition: background-color 0.2s;
+}
+
+.logout-button span {
+    margin-left: 0.5rem;
+}
+
+.logout-button:hover {
+    background: var(--danger);
+}

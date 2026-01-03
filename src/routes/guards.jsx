@@ -16,7 +16,7 @@ export function PublicRoute({ children }) {
     const token = getToken();
 
     if (token) {
-        return <Navigate to="/" replace />;
+        return <Navigate to="/dashboard" replace />;
     }
 
     return children;

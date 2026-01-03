@@ -1,33 +1,58 @@
+/*
+  Global color palette (single source of truth)
+  - Colors stored as RGB triplets so Tailwind can use `rgb(var(--color-*) / <alpha-value>)`.
+  - Use the 60-30-10 rule: background/surface (60%), secondary (30%), accent (10%).
+  - Neon accents should be used sparingly for CTAs, badges and highlights.
+*/
 :root {
-    /* Colores Primarios */
-    --primary: #007BFF;
-    --primary-dark: #0056B3;
+    /* Base background & surfaces */
+    --color-bg: 0 0 0;
+    /* #000000 - Pure Black */
+    --color-surface: 22 22 22;
+    /* #161616 - Slightly lighter gray */
 
-    /* Colores Secundarios */
-    --secondary: #28A745;
+    /* Text */
+    --color-text: 248 250 252;
+    /* #F8FAFC */
+    --color-muted: 148 163 184;
+    /* #94A3B8 */
 
-    /* Colores de Advertencia */
-    --danger: #DC3545;
+    /* Primary monochrome (blue family) */
+    --color-primary-50: 239 246 255;
+    /* #EFF6FF */
+    --color-primary-300: 147 197 253;
+    /* #93C5FD */
+    --color-primary: 59 130 246;
+    /* #3B82F6 */
+    --color-primary-700: 29 78 216;
+    /* #1D4ED8 */
 
-    /* Colores Neutrales */
-    --neutral-light: #F8F9FA;
-    --neutral-medium: #6C757D;
-    --neutral-dark: #343A40;
+    /* Neon accent (Red of Waterfall) */
+    --color-accent: 220 50 50;
+    /* #DC3232 - Slightly less vibrant red */
+    --color-neon-magenta: 255 77 158;
+    /* #FF4D9E */
+
+    /* Semantic */
+    --color-success: 34 197 94;
+    /* #22C55E */
+    --color-danger: 220 50 50;
+    /* #DC3232 */
+
+    /* Glass / overlays */
+    --color-glass: rgba(255, 255, 255, 0.04);
 }
 
+/* Page defaults */
+html,
+body {
+    background-color: rgb(var(--color-bg));
+    color: rgb(var(--color-text));
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 
-/* 
-Primario (azul): Simboliza confianza, calma y profesionalismo.
-#007BFF (Azul claro: botones, enlaces activos, énfasis)
-#0056B3 (Azul oscuro: hover, bordes destacados)
-
-Secundario (verde): Transmite éxito, crecimiento y estabilidad.
-#28A745 (Verde: acciones exitosas, notificaciones)
-
-Accento/Advertencia (rojo): Para mensajes de error o advertencia.
-#DC3545 (Rojo: errores, acciones críticas)
-
-Neutrales (grises): Usados para fondos y textos secundarios.
-#F8F9FA (Gris claro: fondo general)
-#6C757D (Gris medio: texto secundario, iconos pasivos)
-#343A40 (Gris oscuro: texto principal) */
+/* Notes:
+   - Use Tailwind tokens mapped to these CSS variables (configured in tailwind.config.js)
+   - Keep neon accents for important actions only
+*/

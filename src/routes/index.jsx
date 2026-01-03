@@ -5,7 +5,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import Layout from '@shared/ui/Layout/Layout';
 
 // Auth pages
-import { Login, Register } from '@features/auth';
+import { Login, Register, ForgotPassword } from '@features/auth';
 
 // Account pages
 import { Balance, Movements, Profile } from '@features/account';
@@ -19,6 +19,9 @@ import { LoanRequest } from '@features/loans';
 // Report pages
 import { TotalIncome, TotalExpenses, TotalDebts } from '@features/reports';
 
+// Home page
+import { HomePage } from '@features/home';
+
 // Route guards
 import { ProtectedRoute, PublicRoute } from './guards';
 
@@ -26,6 +29,10 @@ import { ProtectedRoute, PublicRoute } from './guards';
 import CarouselInterface from '@shared/ui/Carousel/CarouselInterface';
 
 export const router = createBrowserRouter([
+    {
+        path: '/',
+        element: <HomePage />,
+    },
     {
         path: '/login',
         element: (
@@ -43,7 +50,15 @@ export const router = createBrowserRouter([
         ),
     },
     {
-        path: '/',
+        path: '/forgot-password',
+        element: (
+            <PublicRoute>
+                <ForgotPassword />
+            </PublicRoute>
+        ),
+    },
+    {
+        path: '/dashboard',
         element: (
             <ProtectedRoute>
                 <Layout />

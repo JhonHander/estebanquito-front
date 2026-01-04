@@ -22,24 +22,24 @@ export const ROUTES = {
     DASHBOARD: '/dashboard',
 
     ACCOUNT: {
-        BALANCE: '/dashboard/gestionar/ver-saldo',
-        MOVEMENTS: '/dashboard/gestionar/movimientos',
-        PROFILE: '/dashboard/gestionar/detalle-perfil',
+        BALANCE: '/dashboard/account/balance',
+        MOVEMENTS: '/dashboard/account/movements',
+        PROFILE: '/dashboard/account/profile',
     },
 
     TRANSACTIONS: {
-        TRANSFER: '/dashboard/transacciones/transferir-dinero',
-        DEPOSIT: '/dashboard/transacciones/depositar',
-        WITHDRAW: '/dashboard/transacciones/retirar',
+        TRANSFER: '/dashboard/transactions/transfer',
+        DEPOSIT: '/dashboard/transactions/deposit',
+        WITHDRAW: '/dashboard/transactions/withdraw',
     },
 
     LOANS: {
-        REQUEST: '/dashboard/prestamos/solicitar-prestamo',
+        REQUEST: '/dashboard/loans/request',
     },
 
     REPORTS: {
-        INCOME: '/dashboard/reportes/total-ingresos',
-        EXPENSES: '/dashboard/reportes/total-egresos',
-        DEBTS: '/dashboard/reportes/deudas',
+        INCOME: '/dashboard/reports/income',
+        EXPENSES: '/dashboard/reports/expenses',
+        DEBTS: '/dashboard/reports/debts',
     },
 };

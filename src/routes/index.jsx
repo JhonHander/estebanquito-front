@@ -28,35 +28,7 @@ import { ProtectedRoute, PublicRoute } from './guards';
 // Carousel (shared UI)
 import CarouselInterface from '@shared/ui/Carousel/CarouselInterface';
 
-/**
- * ALTERNATIVE: Flat Route Structure (if you prefer shorter URLs)
- * Each route would be individually protected instead of nested under /dashboard
- *
- * Pros: Shorter URLs, direct access to features
- * Cons: More repetitive guard code, less clear organization
- *
- * Example structure:
- * {
- *     path: '/gestionar/ver-saldo',
- *     element: (
- *         <ProtectedRoute>
- *             <Layout>
- *                 <Balance />
- *             </Layout>
- *         </ProtectedRoute>
- *     ),
- * },
- * {
- *     path: '/transacciones/transferir',
- *     element: (
- *         <ProtectedRoute>
- *             <Layout>
- *                 <Transfer />
- *             </Layout>
- *         </ProtectedRoute>
- *     ),
- * },
- */
+
 export const router = createBrowserRouter([
     {
         path: '/',
@@ -100,46 +72,46 @@ export const router = createBrowserRouter([
             },
             // Account management routes
             {
-                path: 'gestionar/ver-saldo',
+                path: 'account/balance',
                 element: <Balance />,
             },
             {
-                path: 'gestionar/movimientos',
+                path: 'account/movements',
                 element: <Movements />,
             },
             {
-                path: 'gestionar/detalle-perfil',
+                path: 'account/profile',
                 element: <Profile />,
             },
             // Transaction routes
             {
-                path: 'transacciones/transferir-dinero',
+                path: 'transactions/transfer',
                 element: <Transfer />,
             },
             {
-                path: 'transacciones/depositar',
+                path: 'transactions/deposit',
                 element: <Deposit />,
             },
             {
-                path: 'transacciones/retirar',
+                path: 'transactions/withdraw',
                 element: <Withdraw />,
             },
             // Loan routes
             {
-                path: 'prestamos/solicitar-prestamo',
+                path: 'loans/request',
                 element: <LoanRequest />,
             },
             // Report routes
             {
-                path: 'reportes/total-ingresos',
+                path: 'reports/income',
                 element: <TotalIncome />,
             },
             {
-                path: 'reportes/total-egresos',
+                path: 'reports/expenses',
                 element: <TotalExpenses />,
             },
             {
-                path: 'reportes/deudas',
+                path: 'reports/debts',
                 element: <TotalDebts />,
             },
         ],

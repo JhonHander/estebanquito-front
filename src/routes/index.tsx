@@ -71,46 +71,46 @@ export const router = createBrowserRouter([
             },
             // Account management routes
             {
-                path: 'gestionar/ver-saldo',
+                path: 'account/balance',
                 element: <Balance />,
             },
             {
-                path: 'gestionar/movimientos',
+                path: 'account/movements',
                 element: <Movements />,
             },
             {
-                path: 'gestionar/detalle-perfil',
+                path: 'account/profile',
                 element: <Profile />,
             },
             // Transaction routes
             {
-                path: 'transacciones/transferir-dinero',
+                path: 'transactions/transfer',
                 element: <Transfer />,
             },
             {
-                path: 'transacciones/depositar',
+                path: 'transactions/deposit',
                 element: <Deposit />,
             },
             {
-                path: 'transacciones/retirar',
+                path: 'transactions/withdraw',
                 element: <Withdraw />,
             },
             // Loan routes
             {
-                path: 'prestamos/solicitar-prestamo',
+                path: 'loans/request',
                 element: <LoanRequest />,
             },
             // Report routes
             {
-                path: 'reportes/total-ingresos',
+                path: 'reports/income',
                 element: <TotalIncome />,
             },
             {
-                path: 'reportes/total-egresos',
+                path: 'reports/expenses',
                 element: <TotalExpenses />,
             },
             {
-                path: 'reportes/deudas',
+                path: 'reports/debts',
                 element: <TotalDebts />,
             },
         ],

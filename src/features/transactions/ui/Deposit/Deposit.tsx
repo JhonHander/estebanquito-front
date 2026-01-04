@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { transactionService } from '../../api/transaction.service';
+import { ROUTES } from '@shared/config/constants';
 import './Deposit.css';
 
 function Deposit() {
@@ -64,7 +65,7 @@ function Deposit() {
 
             <div className="deposit-transaction">
                 <p>¿Deseas ver los movimientos?</p>
-                <NavLink to="/gestionar/movimientos" className="to-button">
+                <NavLink to={ROUTES.ACCOUNT.MOVEMENTS} className="to-button">
                     Ver Movimientos
                 </NavLink>
             </div>

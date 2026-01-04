@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { GrTransaction } from 'react-icons/gr';
 import { useAuth } from '@features/auth';
+import { ROUTES } from '@shared/config/constants';
 import './Balance.css';
 
 function Balance() {
@@ -52,7 +53,7 @@ function Balance() {
 
             <div className="saldo-transaction">
                 <p>¿Deseas ver los movimientos?</p>
-                <NavLink to="/gestionar/movimientos" className="to-button">
+                <NavLink to={ROUTES.ACCOUNT.MOVEMENTS} className="to-button">
                     <GrTransaction /> Ver Movimientos
                 </NavLink>
             </div>

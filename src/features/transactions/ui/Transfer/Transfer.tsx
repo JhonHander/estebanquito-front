@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { transactionService } from '../../api/transaction.service';
 import { useAuth } from '@features/auth';
+import { ROUTES } from '@shared/config/constants';
 import './Transfer.css';
 
 function Transfer() {
@@ -94,7 +95,7 @@ function Transfer() {
 
             <div className="transfer-transaction">
                 <p>¿Deseas ver los movimientos?</p>
-                <NavLink to="/gestionar/movimientos" className="to-button">
+                <NavLink to={ROUTES.ACCOUNT.MOVEMENTS} className="to-button">
                     Ver Movimientos
                 </NavLink>
             </div>

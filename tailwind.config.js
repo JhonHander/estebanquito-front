@@ -1,11 +1,18 @@
 /** @type {import('tailwindcss').Config} */
+/**
+ * Tailwind CSS configuration with custom design system
+ * Extends default colors with CSS custom properties for consistent theming
+ * Uses alpha transparency support for flexible opacity control
+ */
 export default {
     content: [
         "./index.html",
-        "./src/**/*.{js,jsx,ts,tsx}",
+        "./src/**/*.{js,ts,jsx,tsx}",
     ],
     theme: {
         extend: {
+            // Custom color palette using CSS variables for runtime theme switching
+            // Alpha-value placeholder enables opacity utilities like bg-primary/50
             colors: {
                 bg: 'rgb(var(--color-bg) / <alpha-value>)',
                 surface: 'rgb(var(--color-surface) / <alpha-value>)',

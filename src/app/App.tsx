@@ -5,6 +5,10 @@ import { router } from '@routes/index';
 import '@styles/colors.css';
 import '../index.css';
 
+/**
+ * Root application component that sets up global providers and routing
+ * Wraps the entire app with authentication context and React Router
+ */
 function App() {
     return (
         <AuthProvider>

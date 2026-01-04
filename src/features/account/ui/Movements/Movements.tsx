@@ -3,6 +3,7 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import { IoMdEye } from 'react-icons/io';
 import { transactionService } from '@features/transactions';
 import { getToken } from '@shared/lib/storage/tokenStorage';
+import { ROUTES } from '@shared/config/constants';
 import './Movements.css';
 
 function Movements() {
@@ -96,7 +97,7 @@ function Movements() {
 
             <div className="saldo-transaction">
                 <p>¿Quizás buscabas el saldo?</p>
-                <NavLink to="/gestionar/ver-saldo" className="to-button">
+                <NavLink to={ROUTES.ACCOUNT.BALANCE} className="to-button">
                     <IoMdEye /> Ver Saldo
                 </NavLink>
             </div>

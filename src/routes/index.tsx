@@ -28,35 +28,6 @@ import { ProtectedRoute, PublicRoute } from './guards';
 // Carousel (shared UI)
 import CarouselInterface from '@shared/ui/Carousel/CarouselInterface';
 
-/**
- * ALTERNATIVE: Flat Route Structure (if you prefer shorter URLs)
- * Each route would be individually protected instead of nested under /dashboard
- *
- * Pros: Shorter URLs, direct access to features
- * Cons: More repetitive guard code, less clear organization
- *
- * Example structure:
- * {
- *     path: '/gestionar/ver-saldo',
- *     element: (
- *         <ProtectedRoute>
- *             <Layout>
- *                 <Balance />
- *             </Layout>
- *         </ProtectedRoute>
- *     ),
- * },
- * {
- *     path: '/transacciones/transferir',
- *     element: (
- *         <ProtectedRoute>
- *             <Layout>
- *                 <Transfer />
- *             </Layout>
- *         </ProtectedRoute>
- *     ),
- * },
- */
 export const router = createBrowserRouter([
     {
         path: '/',
@@ -144,38 +115,6 @@ export const router = createBrowserRouter([
             },
         ],
     },
-    // Catch-all route for 404 errors
-    {
-        path: '*',
-        element: (
-            <div style={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-                height: '100vh',
-                textAlign: 'center',
-                padding: '2rem'
-            }}>
-                <h1 style={{ fontSize: '3rem', marginBottom: '1rem' }}>404</h1>
-                <h2 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>Página no encontrada</h2>
-                <p style={{ marginBottom: '2rem', color: '#666' }}>
-                    La página que buscas no existe o ha sido movida.
-                </p>
-                <a
-                    href="/"
-                    style={{
-                        padding: '0.75rem 1.5rem',
-                        backgroundColor: '#007bff',
-                        color: 'white',
-                        textDecoration: 'none',
-                        borderRadius: '0.375rem',
-                        fontWeight: '500'
-                    }}
-                >
-                    Ir al inicio
-                </a>
-            </div>
-        ),
-    },
 ]);
+
+export default router;

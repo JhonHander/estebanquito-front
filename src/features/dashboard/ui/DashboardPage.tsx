@@ -25,7 +25,7 @@ export const DashboardPage: React.FC = () => {
         <div className="flex flex-col gap-6">
           <CreditCardWidget />
           <QuickTransfer />
-          
+
           {/* Stats Column */}
           <div className="flex flex-col gap-4">
             <StatCard

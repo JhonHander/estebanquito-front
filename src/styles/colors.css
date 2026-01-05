@@ -5,51 +5,51 @@
   - Neon accents should be used sparingly for CTAs, badges and highlights.
 */
 :root {
-    /* Base background & surfaces */
-    --color-bg: 0 0 0;
-    /* #000000 - Pure Black */
-    --color-surface: 22 22 22;
-    /* #161616 - Slightly lighter gray */
+  /* Base background & surfaces */
+  --color-bg: 10 10 10;
+  /* #0A0A0A - Deep Black */
+  --color-surface: 28 28 28;
+  /* #1C1C1C - Dark Gray */
 
-    /* Text */
-    --color-text: 248 250 252;
-    /* #F8FAFC */
-    --color-muted: 148 163 184;
-    /* #94A3B8 */
+  /* Text */
+  --color-text: 248 250 252;
+  /* #F8FAFC */
+  --color-muted: 148 163 184;
+  /* #94A3B8 */
 
-    /* Primary monochrome (blue family) */
-    --color-primary-50: 239 246 255;
-    /* #EFF6FF */
-    --color-primary-300: 147 197 253;
-    /* #93C5FD */
-    --color-primary: 59 130 246;
-    /* #3B82F6 */
-    --color-primary-700: 29 78 216;
-    /* #1D4ED8 */
+  /* Primary monochrome (blue family) */
+  --color-primary-50: 239 246 255;
+  /* #EFF6FF */
+  --color-primary-300: 147 197 253;
+  /* #93C5FD */
+  --color-primary: 59 130 246;
+  /* #3B82F6 */
+  --color-primary-700: 29 78 216;
+  /* #1D4ED8 */
 
-    /* Neon accent (Red of Waterfall) */
-    --color-accent: 220 50 50;
-    /* #DC3232 - Slightly less vibrant red */
-    --color-neon-magenta: 255 77 158;
-    /* #FF4D9E */
+  /* Neon accent (Red of Waterfall) */
+  --color-accent: 220 50 50;
+  /* #DC3232 - Slightly less vibrant red */
+  --color-neon-magenta: 255 77 158;
+  /* #FF4D9E */
 
-    /* Semantic */
-    --color-success: 34 197 94;
-    /* #22C55E */
-    --color-danger: 220 50 50;
-    /* #DC3232 */
+  /* Semantic */
+  --color-success: 34 197 94;
+  /* #22C55E */
+  --color-danger: 220 50 50;
+  /* #DC3232 */
 
-    /* Glass / overlays */
-    --color-glass: rgba(255, 255, 255, 0.04);
+  /* Glass / overlays */
+  --color-glass: rgba(255, 255, 255, 0.04);
 }
 
 /* Page defaults */
 html,
 body {
-    background-color: rgb(var(--color-bg));
-    color: rgb(var(--color-text));
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(var(--color-bg));
+  color: rgb(var(--color-text));
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Notes:

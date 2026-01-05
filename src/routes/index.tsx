@@ -25,8 +25,8 @@ import { HomePage } from '@features/home';
 // Route guards
 import { ProtectedRoute, PublicRoute } from './guards';
 
-// Carousel (shared UI)
-import CarouselInterface from '@shared/ui/Carousel/CarouselInterface';
+// Dashboard
+import DashboardPage from '@features/dashboard/ui/DashboardPage';
 
 export const router = createBrowserRouter([
     {
@@ -67,7 +67,7 @@ export const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                element: <CarouselInterface />,
+                element: <DashboardPage />,
             },
             // Account management routes
             {

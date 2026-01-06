@@ -11,7 +11,6 @@ import {
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Button } from "@/components/ui/button"
-import { Separator } from "@/components/ui/separator"
 import { Mail, ArrowLeft, KeyRound, CheckCircle2 } from "lucide-react"
 
 const ForgotPassword = () => {

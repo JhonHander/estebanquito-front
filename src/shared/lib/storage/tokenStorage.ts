@@ -10,7 +10,6 @@ interface DecodedToken {
 
 /**
  * Token storage utilities for managing JWT authentication tokens
- * Uses sessionStorage to persist tokens across browser sessions
  */
 export const tokenStorage = {
     save: (token: string): void => {

@@ -8,9 +8,7 @@ const MOCK_USER = {
     firstName: "Usuario",
     lastName: "Demo",
     email: "demo@estebanquito.com",
-    nombre: "Usuario Demo",
-    numero_cuenta: "1234567890",
-    tipo: "Corriente",
+    accountType: "Corriente",
     balance: 98248000
 };
 

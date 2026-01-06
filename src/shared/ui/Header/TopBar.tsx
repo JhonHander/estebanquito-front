@@ -18,7 +18,7 @@ interface TopBarProps {
 
 const TopBar = ({ onMenuClick }: TopBarProps) => {
     const location = useLocation();
-    const { user } = useAuth();
+    // const { user } = useAuth();
 
     const notifications = [
         {

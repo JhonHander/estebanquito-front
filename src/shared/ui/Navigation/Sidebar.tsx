@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import {
     LayoutDashboard,
     Wallet,
     ArrowRightLeft,
     PieChart,
     CreditCard,
-    TrendingUp,
     Settings,
     HelpCircle,
     ChevronDown,
@@ -32,8 +31,14 @@ interface SidebarProps {
 
 const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
     const location = useLocation();
+    const navigate = useNavigate();
     const { user, logout } = useAuth();
     const [expandedGroups, setExpandedGroups] = useState<string[]>(['account', 'transactions']);
+
+    const handleLogout = () => {
+        logout();
+        navigate(ROUTES.HOME);
+    };
 
     const toggleGroup = (group: string) => {
         setExpandedGroups(prev =>
@@ -43,7 +48,6 @@ const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
         );
     };
 
-    const isActive = (path: string) => location.pathname === path;
     const isGroupActive = (paths: string[]) => paths.some(path => location.pathname.startsWith(path));
 
     return (
@@ -252,7 +256,7 @@ const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
                                     {(user?.firstName || user?.nombre || 'U').charAt(0).toUpperCase()}
                                 </div>
                                 <div className="flex-1 min-w-0">
-                                    <p className="text-sm font-medium text-white truncate group-hover:text-red-500 transition-colors">
+                                    <p className="text-sm font-medium text-white truncate group-hover:text-zinc-400 transition-colors">
                                         {user?.firstName ? `${user.firstName} ${user.lastName || ''}` : (user?.nombre || 'Usuario Pro')}
                                     </p>
                                     <p className="text-xs text-zinc-500 truncate">
@@ -277,8 +281,8 @@ const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
                                 </div>
                                 <div className="h-px bg-zinc-800 my-1" />
                                 <button
-                                    onClick={logout}
-                                    className="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-red-900/20 hover:text-red-500 transition-colors text-sm text-left"
+                                    onClick={handleLogout}
+                                    className="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-zinc-900 hover:text-white transition-colors text-sm text-left"
                                 >
                                     <LogOut size={16} />
                                     <span>Cerrar Sesión</span>

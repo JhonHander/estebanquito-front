@@ -1,10 +1,10 @@
 import React from 'react';
-import LaserHero from '@/components/ui/laser-focus-crypto-hero-section';
+import Hero from './components/Hero';
 
 const HomePage = () => {
     return (
         <div className="w-full h-full">
-            <LaserHero />
+            <Hero />
         </div>
     );
 };

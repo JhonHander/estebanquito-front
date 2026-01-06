@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '@features/auth';
-import { reportService } from '../../api/report.service';
+import { reportService } from '@features/reports';
 import { TrendingDown, ArrowDownRight, DollarSign, Calendar, PieChart } from 'lucide-react';
 import { Bar, BarChart, ResponsiveContainer, Tooltip, XAxis, YAxis, Cell } from 'recharts';
 

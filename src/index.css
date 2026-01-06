@@ -67,3 +67,17 @@ Neutrales (grises): Usados para fondos y textos secundarios.
 #F8F9FA (Gris claro: fondo general)
 #6C757D (Gris medio: texto secundario, iconos pasivos)
 #343A40 (Gris oscuro: texto principal) */
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari and Opera */
+  }
+}

@@ -2,6 +2,18 @@ import { getToken, saveToken, getCurrentAccount } from '@shared/lib/storage/toke
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000/api';
 
+// Mock data for portfolio fallback
+const MOCK_USER = {
+    accountNumber: "1234567890",
+    firstName: "Usuario",
+    lastName: "Demo",
+    email: "demo@estebanquito.com",
+    nombre: "Usuario Demo",
+    numero_cuenta: "1234567890",
+    tipo: "Corriente",
+    balance: 98248000
+};
+
 interface LoginCredentials {
     accountNumber: string;
     password: string;
@@ -39,24 +51,34 @@ export const authService = {
      * Automatically saves token to storage upon successful login
      */
     async login(credentials: LoginCredentials): Promise<AuthResponse> {
-        const response = await fetch(`${API_BASE_URL}/login`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(credentials),
-        });
+        try {
+            const response = await fetch(`${API_BASE_URL}/login`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(credentials),
+            });
 
-        const data = await response.json();
+            const data = await response.json();
 
-        if (!response.ok) {
-            throw new Error(data.message || 'Error al iniciar sesión');
+            if (!response.ok) {
+                throw new Error(data.message || 'Error al iniciar sesión');
+            }
+
+            // Persist token for subsequent authenticated requests
+            if (data.token) {
+                saveToken(data.token);
+            }
+
+            return data;
+        } catch (error) {
+            console.warn('API Login failed, using mock fallback for portfolio:', error);
+            // Fallback for portfolio: allow login with any credentials if API is down
+            if (credentials.accountNumber === "1234567890" || credentials.accountNumber === "demo") {
+                saveToken("mock-jwt-token");
+                return { token: "mock-jwt-token", message: "Login exitoso (Mock)" };
+            }
+            throw error;
         }
-
-        // Persist token for subsequent authenticated requests
-        if (data.token) {
-            saveToken(data.token);
-        }
-
-        return data;
     },
 
     /**
@@ -64,19 +86,24 @@ export const authService = {
      * Validates user data on the server side
      */
     async register(userData: RegisterData): Promise<AuthResponse> {
-        const response = await fetch(`${API_BASE_URL}/register`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(userData),
-        });
+        try {
+            const response = await fetch(`${API_BASE_URL}/register`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(userData),
+            });
 
-        const data = await response.json();
+            const data = await response.json();
 
-        if (!response.ok) {
-            throw new Error(data.message || 'Error al registrarse');
+            if (!response.ok) {
+                throw new Error(data.message || 'Error al registrarse');
+            }
+
+            return data;
+        } catch (error) {
+            console.warn('API Register failed, using mock fallback for portfolio:', error);
+            return { message: "Registro exitoso (Mock)" };
         }
-
-        return data;
     },
 };
 
@@ -93,25 +120,33 @@ export const userService = {
         const token = getToken();
         const accountNumber = getCurrentAccount();
 
-        if (!token || !accountNumber) {
+        if (!token) {
             throw new Error('Usuario no autenticado');
         }
 
-        const response = await fetch(`${API_BASE_URL}/getUserByAccountNumber`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${token}`,
-            },
-            body: JSON.stringify({ accountNumber }),
-        });
+        try {
+            // If it's a mock token, return mock user immediately
+            if (token === "mock-jwt-token") return MOCK_USER as any;
 
-        if (!response.ok) {
-            const error = await response.json();
-            throw new Error(error.message || 'Error al obtener información del usuario');
+            const response = await fetch(`${API_BASE_URL}/getUserByAccountNumber`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`,
+                },
+                body: JSON.stringify({ accountNumber }),
+            });
+
+            if (!response.ok) {
+                const error = await response.json();
+                throw new Error(error.message || 'Error al obtener información del usuario');
+            }
+
+            return response.json();
+        } catch (error) {
+            console.warn('API getUserInfo failed, using mock fallback for portfolio:', error);
+            return MOCK_USER as any;
         }
-
-        return response.json();
     },
 
     /**
@@ -125,20 +160,27 @@ export const userService = {
             throw new Error('Usuario no autenticado');
         }
 
-        const response = await fetch(`${API_BASE_URL}/updateUserByAccountNumber`, {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${token}`,
-            },
-            body: JSON.stringify(data),
-        });
+        try {
+            if (token === "mock-jwt-token") return MOCK_USER as any;
 
-        if (!response.ok) {
-            const error = await response.json();
-            throw new Error(error.message || 'Error al actualizar datos');
+            const response = await fetch(`${API_BASE_URL}/updateUserByAccountNumber`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`,
+                },
+                body: JSON.stringify(data),
+            });
+
+            if (!response.ok) {
+                const error = await response.json();
+                throw new Error(error.message || 'Error al actualizar datos');
+            }
+
+            return response.json();
+        } catch (error) {
+            console.warn('API updateUserInfo failed, using mock fallback for portfolio:', error);
+            return MOCK_USER as any;
         }
-
-        return response.json();
     },
 };

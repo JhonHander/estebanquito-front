@@ -62,7 +62,7 @@ const Transfer: React.FC = () => {
                         />
                         <span className="absolute right-4 top-1/2 -translate-y-1/2 text-sm text-zinc-500 font-medium">COP</span>
                     </div>
-                    <p className="text-right text-xs text-zinc-500 mt-2">Saldo disponible: $98.248.000</p>
+                    <p className="text-right text-xs text-zinc-500 mt-2">Saldo disponible: $38.450.000</p>
                 </div>
 
                 {/* Step 3: Source */}
@@ -82,7 +82,7 @@ const Transfer: React.FC = () => {
                     </div>
                 </div>
 
-                <button className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-4 rounded-xl transition-all shadow-lg shadow-red-900/30 flex items-center justify-center gap-2 transform active:scale-[0.99]">
+                <button className="w-full bg-white hover:bg-zinc-200 text-black font-bold py-4 rounded-xl transition-all shadow-lg flex items-center justify-center gap-2 transform active:scale-[0.99]">
                     Transferir Ahora <ArrowRight size={20} />
                 </button>
             </div>
@@ -125,7 +125,7 @@ const Transfer: React.FC = () => {
                             </button>
                             <button
                                 onClick={() => setIsNewContactOpen(false)}
-                                className="px-6 py-2 text-sm font-bold bg-red-600 hover:bg-red-700 text-white rounded-lg transition-colors shadow-lg shadow-red-900/20"
+                                className="px-6 py-2 text-sm font-bold bg-white hover:bg-zinc-200 text-black rounded-lg transition-colors shadow-lg"
                             >
                                 Guardar Contacto
                             </button>

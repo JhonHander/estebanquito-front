@@ -27,6 +27,9 @@
       "@/*": [
         "./src/*"
       ],
+      "@app/*": [
+        "./src/app/*"
+      ],
       "@features/*": [
         "./src/features/*"
       ],
@@ -35,6 +38,15 @@
       ],
       "@components/*": [
         "./src/components/*"
+      ],
+      "@routes/*": [
+        "./src/routes/*"
+      ],
+      "@assets/*": [
+        "./src/assets/*"
+      ],
+      "@styles/*": [
+        "./src/styles/*"
       ]
     }
   },

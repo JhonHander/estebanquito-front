@@ -16,10 +16,10 @@ const Profile: React.FC = () => {
     useEffect(() => {
         if (user) {
             setProfileData({
-                name: user.nombre || '',
+                name: user.nombre || (user.firstName ? `${user.firstName} ${user.lastName || ''}` : ''),
                 email: user.email || '',
-                accountNumber: user.numero_cuenta || '',
-                accountType: user.tipo || '',
+                accountNumber: user.numero_cuenta || user.accountNumber || '',
+                accountType: user.tipo || 'Corriente',
             });
         }
     }, [user]);

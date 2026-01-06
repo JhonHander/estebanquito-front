@@ -3,7 +3,7 @@ import { Wallet, Hash, CheckCircle, MapPin } from 'lucide-react';
 
 const Withdraw: React.FC = () => {
     const [step, setStep] = useState<'input' | 'code'>('input');
-    const [amount, setAmount] = useState('500');
+    const [amount, setAmount] = useState('20000');
 
     return (
         <div className="max-w-2xl mx-auto space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
@@ -26,7 +26,7 @@ const Withdraw: React.FC = () => {
                             />
                         </div>
                         <div className="flex gap-3 justify-center">
-                            {['200', '500', '1000'].map(val => (
+                            {['40000', '100000', '500000'].map(val => (
                                 <button
                                     key={val}
                                     onClick={() => setAmount(val)}
@@ -47,7 +47,7 @@ const Withdraw: React.FC = () => {
                                 </div>
                                 <div>
                                     <p className="text-white font-medium text-sm">Billetera Principal</p>
-                                    <p className="text-zinc-500 text-xs">Saldo: $24,562.00</p>
+                                    <p className="text-zinc-500 text-xs">Saldo: $38.450.000</p>
                                 </div>
                             </div>
                         </div>
@@ -55,7 +55,7 @@ const Withdraw: React.FC = () => {
 
                     <button
                         onClick={() => setStep('code')}
-                        className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-4 rounded-xl transition-all shadow-lg flex items-center justify-center gap-2 transform active:scale-[0.99]"
+                        className="w-full bg-white hover:bg-zinc-200 text-black font-bold py-4 rounded-xl transition-all shadow-lg flex items-center justify-center gap-2 transform active:scale-[0.99]"
                     >
                         <Hash size={20} /> Generar Código de Retiro
                     </button>

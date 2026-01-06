@@ -13,6 +13,34 @@ export const DashboardPage: React.FC = () => {
       {/* Hero Section */}
       <HeroBanner />
 
+      {/* Stats Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <StatCard
+          title="Balance Total"
+          amount={38450000}
+          change={12.5}
+          icon={Wallet}
+          trend="up"
+          description="Incremento del 12% este mes"
+        />
+        <StatCard
+          title="Ingresos"
+          amount={12800000}
+          change={4.2}
+          icon={TrendingUp}
+          trend="up"
+          description="Mayor que el mes pasado"
+        />
+        <StatCard
+          title="Gastos"
+          amount={5200000}
+          change={-1.8}
+          icon={TrendingDown}
+          trend="down"
+          description="Reducción de gastos lograda"
+        />
+      </div>
+
       {/* Main Content Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Left Column (2/3 width) */}
@@ -25,34 +53,6 @@ export const DashboardPage: React.FC = () => {
         <div className="flex flex-col gap-6">
           <CreditCardWidget />
           <QuickTransfer />
-
-          {/* Stats Column */}
-          <div className="flex flex-col gap-4">
-            <StatCard
-              title="Balance Total"
-              amount={98248000}
-              change={12.5}
-              icon={Wallet}
-              trend="up"
-              compact={true}
-            />
-            <StatCard
-              title="Ingresos"
-              amount={32962000}
-              change={4.2}
-              icon={TrendingUp}
-              trend="up"
-              compact={true}
-            />
-            <StatCard
-              title="Gastos"
-              amount={15280000}
-              change={-1.8}
-              icon={TrendingDown}
-              trend="down"
-              compact={true}
-            />
-          </div>
         </div>
       </div>
     </div>

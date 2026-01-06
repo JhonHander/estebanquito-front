@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 :root {
   /* Colores Primarios (Morados) */
   --primary: #2c2244;
@@ -33,6 +35,13 @@
   /* Texto claro */
   --text-muted: #c7c7d1;
   /* Texto sutil */
+
+  /* Chart Colors */
+  --chart-1: 12 76% 61%;
+  --chart-2: 173 58% 39%;
+  --chart-3: 197 37% 24%;
+  --chart-4: 43 74% 66%;
+  --chart-5: 27 87% 67%;
 }
 
 
@@ -58,3 +67,17 @@ Neutrales (grises): Usados para fondos y textos secundarios.
 #F8F9FA (Gris claro: fondo general)
 #6C757D (Gris medio: texto secundario, iconos pasivos)
 #343A40 (Gris oscuro: texto principal) */
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari and Opera */
+  }
+}

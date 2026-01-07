@@ -28,93 +28,96 @@ import { ProtectedRoute, PublicRoute } from './guards';
 // Dashboard
 import DashboardPage from '@features/dashboard/ui/DashboardPage';
 
-export const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <HomePage />,
-    },
-    {
-        path: '/login',
-        element: (
-            <PublicRoute>
-                <Login />
-            </PublicRoute>
-        ),
-    },
-    {
-        path: '/register',
-        element: (
-            <PublicRoute>
-                <Register />
-            </PublicRoute>
-        ),
-    },
-    {
-        path: '/forgot-password',
-        element: (
-            <PublicRoute>
-                <ForgotPassword />
-            </PublicRoute>
-        ),
-    },
-    {
-        path: '/dashboard',
-        element: (
-            <ProtectedRoute>
-                <Layout />
-            </ProtectedRoute>
-        ),
-        children: [
-            {
-                index: true,
-                element: <DashboardPage />,
-            },
-            // Account management routes
-            {
-                path: 'account/balance',
-                element: <Balance />,
-            },
-            {
-                path: 'account/movements',
-                element: <Movements />,
-            },
-            {
-                path: 'account/profile',
-                element: <Profile />,
-            },
-            // Transaction routes
-            {
-                path: 'transactions/transfer',
-                element: <Transfer />,
-            },
-            {
-                path: 'transactions/deposit',
-                element: <Deposit />,
-            },
-            {
-                path: 'transactions/withdraw',
-                element: <Withdraw />,
-            },
-            // Loan routes
-            {
-                path: 'loans/request',
-                element: <LoanRequest />,
-            },
-            // Report routes
-            {
-                path: 'reports/income',
-                element: <TotalIncome />,
-            },
-            {
-                path: 'reports/expenses',
-                element: <TotalExpenses />,
-            },
-            {
-                path: 'reports/debts',
-                element: <TotalDebts />,
-            },
-        ],
-    },
-]);
+const basename = import.meta.env.PROD ? '/estebanquito-front' : '/';
+
+export const router = createBrowserRouter(
+    [
+        {
+            path: '/',
+            element: <HomePage />,
+        },
+        {
+            path: '/login',
+            element: (
+                <PublicRoute>
+                    <Login />
+                </PublicRoute>
+            ),
+        },
+        {
+            path: '/register',
+            element: (
+                <PublicRoute>
+                    <Register />
+                </PublicRoute>
+            ),
+        },
+        {
+            path: '/forgot-password',
+            element: (
+                <PublicRoute>
+                    <ForgotPassword />
+                </PublicRoute>
+            ),
+        },
+        {
+            path: '/dashboard',
+            element: (
+                <ProtectedRoute>
+                    <Layout />
+                </ProtectedRoute>
+            ),
+            children: [
+                {
+                    index: true,
+                    element: <DashboardPage />,
+                },
+                // Account management routes
+                {
+                    path: 'account/balance',
+                    element: <Balance />,
+                },
+                {
+                    path: 'account/movements',
+                    element: <Movements />,
+                },
+                {
+                    path: 'account/profile',
+                    element: <Profile />,
+                },
+                // Transaction routes
+                {
+                    path: 'transactions/transfer',
+                    element: <Transfer />,
+                },
+                {
+                    path: 'transactions/deposit',
+                    element: <Deposit />,
+                },
+                {
+                    path: 'transactions/withdraw',
+                    element: <Withdraw />,
+                },
+                // Loan routes
+                {
+                    path: 'loans/request',
+                    element: <LoanRequest />,
+                },
+                // Report routes
+                {
+                    path: 'reports/income',
+                    element: <TotalIncome />,
+                },
+                {
+                    path: 'reports/expenses',
+                    element: <TotalExpenses />,
+                },
+                {
+                    path: 'reports/debts',
+                    element: <TotalDebts />,
+                },
+            ],
+        },
+    ], { basename });
 
 export default router;

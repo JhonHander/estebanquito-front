@@ -38,8 +38,8 @@ cd estebanquito-front
 # Install dependencies
 npm install
 
-# Configure environment (see Environment section below)
-cp src/.env.development .env.development
+# Environment file is already configured in src/.env.development
+# Update VITE_API_BASE_URL if your backend runs on a different port
 
 # Start development server
 npm run dev

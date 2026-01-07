@@ -1,10 +1,6 @@
-<div align="center">
+# Estebanquito
 
-# 🏦 Estebanquito
-
-### Modern Banking Application Frontend
-
-A feature-rich React banking platform for managing accounts, transactions, loans, and financial insights with modern UX design.
+A modern React banking application for managing accounts, transactions, loans, and financial reports with a clean, professional interface.
 
 [![React](https://img.shields.io/badge/React-18.3.1-61dafb?style=flat&logo=react&logoColor=white)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-5.4.8-646cff?style=flat&logo=vite&logoColor=white)](https://vitejs.dev/)
@@ -12,23 +8,19 @@ A feature-rich React banking platform for managing accounts, transactions, loans
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.1.18-38bdf8?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-[Live Demo](https://jhonhander.github.io/estebanquito-front/) · [Report Bug](https://github.com/JhonHander/estebanquito-front/issues) · [Request Feature](https://github.com/JhonHander/estebanquito-front/issues)
+**[Live Demo](https://jhonhander.github.io/estebanquito-front/) · [Report Bug](https://github.com/JhonHander/estebanquito-front/issues) · [Request Feature](https://github.com/JhonHander/estebanquito-front/issues)**
 
-</div>
-
----
-
-## ✨ Features
+## Features
 
 - **Authentication** — Secure JWT-based login and registration
-- **Account Management** — Real-time balance, transaction history, and profile
+- **Account Management** — Real-time balance, transaction history, and profile  
 - **Transactions** — Deposit, withdraw, and transfer funds seamlessly
-- **Loan System** — Apply for and manage loans
+- **Loan System** — Apply for and manage loans with reporting
 - **Financial Reports** — Track income, expenses, and debts with visual insights
-- **Modern UI** — Built with Tailwind CSS, Radix UI, and Framer Motion
 - **Protected Routes** — Secure navigation with authentication guards
+- **Modern UI** — Built with Tailwind CSS, Radix UI, and responsive design
 
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
 # Clone the repository
@@ -38,49 +30,25 @@ cd estebanquito-front
 # Install dependencies
 npm install
 
-# Environment file is already configured in src/.env.development
-# Update VITE_API_BASE_URL if your backend runs on a different port
-
 # Start development server
 npm run dev
 ```
 
 Visit `http://localhost:5173` to see the app in action.
 
-## 🛠️ Tech Stack
+Environment is pre-configured in `src/.env.development`. Update `VITE_API_BASE_URL` if your backend runs on a different port.
 
-<table>
-<tr>
-<td>
+## Tech Stack
 
-**Frontend**
-- React 18
-- TypeScript
-- Vite
+| Frontend | Styling | State & Routing |
+|----------|---------|-----------------|
+| React 18 | Tailwind CSS 4 | React Router v6 |
+| TypeScript | Radix UI | React Context |
+| Vite | Framer Motion | JWT Auth |
 
-</td>
-<td>
+**Additional:** Axios, Recharts, Lucide Icons, TanStack Table
 
-**Styling**
-- Tailwind CSS 4
-- Radix UI
-- Framer Motion
-
-</td>
-<td>
-
-**State & Routing**
-- React Router v6
-- React Context
-- JWT Auth
-
-</td>
-</tr>
-</table>
-
-**Additional Libraries:** Axios · Recharts · Lucide Icons · TanStack Table
-
-## 📁 Architecture
+## Project Structure
 
 ```
 src/
@@ -95,10 +63,12 @@ src/
 │   ├── ui/          # Reusable components
 │   └── lib/         # Utilities & helpers
 ├── routes/          # Route configuration & guards
-└── app/             # Application setup & providers
+└── app/             # Application setup
 ```
 
-**Design Pattern:** Feature-based architecture with clear separation of concerns
+### Architecture
+
+The application uses a **feature-based architecture** with clear separation of concerns. Each feature is self-contained with its own API services, models, and UI components.
 
 ```mermaid
 graph TD
@@ -115,9 +85,9 @@ graph TD
     E --> K[Reports]
 ```
 
-## ⚙️ Environment Setup
+## Configuration
 
-Create `src/.env.development` file:
+Create `src/.env.development`:
 
 ```env
 VITE_API_BASE_URL=http://localhost:3000/api
@@ -125,15 +95,15 @@ VITE_APP_NAME=Estebanquito
 VITE_APP_VERSION=1.0.0
 ```
 
-| Variable | Description | Required |
-|----------|-------------|----------|
-| `VITE_API_BASE_URL` | Backend API endpoint | ✅ Yes |
-| `VITE_APP_NAME` | Application name | Optional |
-| `VITE_APP_VERSION` | Version identifier | Optional |
+All environment variables must be prefixed with `VITE_` to be accessible in the app.
 
-> **Note:** All environment variables must be prefixed with `VITE_` to be accessible in the app.
+| Variable | Description |
+|----------|-------------|
+| `VITE_API_BASE_URL` | Backend API endpoint |
+| `VITE_APP_NAME` | Application name |
+| `VITE_APP_VERSION` | Version identifier |
 
-## 📜 Available Scripts
+## Scripts
 
 ```bash
 npm run dev          # Start development server (localhost:5173)
@@ -143,48 +113,41 @@ npm run lint         # Run ESLint
 npm run deploy       # Deploy to GitHub Pages
 ```
 
-## 🎨 Code Style & Conventions
+## Code Style
 
 - **Path Aliases** — Use `@features`, `@shared`, `@app` for clean imports
 - **TypeScript** — Type-safe code with strict mode enabled
-- **Component Structure** — Organized by feature with api/ui/model separation
-- **Naming** — Clear, descriptive names following React conventions
+- **Component Organization** — Feature-based with api/ui/model separation
+- **Naming Conventions** — Clear, descriptive names following React patterns
 
 ```typescript
-// Example: Clean imports with path aliases
 import { useAuth } from '@features/auth';
 import { Button } from '@shared/ui/Button';
 import { ROUTES } from '@shared/config/constants';
 ```
 
-## 🔒 Security
+## Security
 
-- JWT token-based authentication with session storage
-- Protected routes with authentication guards
+- JWT token-based authentication with secure session storage
+- Protected routes with automatic authentication guards
 - Environment-based configuration (no hardcoded secrets)
 - Input validation and XSS protection
 - Secure API communication with Axios interceptors
 
-## 🤝 Contributing
+## Contributing
 
-Contributions are welcome! This is a learning project, so feel free to:
+Contributions are welcome! To contribute:
 
 1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
+2. Create a feature branch: `git checkout -b feature/your-feature`
+3. Commit your changes: `git commit -m 'Add your feature'`
+4. Push to the branch: `git push origin feature/your-feature`
 5. Open a Pull Request
 
-## 📄 License
+## License
 
-This project is licensed under the MIT License. See [LICENSE](LICENSE) file for details.
+MIT License. See [LICENSE](LICENSE) file for details.
 
 ---
 
-<div align="center">
-
-**Built with ❤️ using React, TypeScript, and Tailwind CSS**
-
-⭐ Star this repo if you find it helpful!
-
-</div>
+Built with React, TypeScript, and Tailwind CSS

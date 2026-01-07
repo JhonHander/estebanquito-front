@@ -31,5 +31,5 @@ export default defineConfig({
       },
     },
   },
-  base: '/estebanquito-front/',
+  base: process.env.NODE_ENV === 'production' ? '/estebanquito-front/' : '/',
 });

@@ -232,7 +232,7 @@ const Login = () => {
                                         id="email"
                                         name="accountNumber"
                                         type="text"
-                                        placeholder="Tu número de cuenta"
+                                        placeholder="Tu número de cuenta ('demo')"
                                         value={loginData.accountNumber}
                                         onChange={handleChange}
                                         className="pl-10 bg-black/20 border-white/9 focus:border-accent/30 transition-colors"
@@ -253,7 +253,7 @@ const Login = () => {
                                         id="password"
                                         name="password"
                                         type={showPassword ? "text" : "password"}
-                                        placeholder="••••••••"
+                                        placeholder="•••••••• ('demo')"
                                         value={loginData.password}
                                         onChange={handleChange}
                                         className="pl-10 pr-10 bg-black/20 border-white/9 focus:border-accent/30 transition-colors"

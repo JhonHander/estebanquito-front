@@ -3,7 +3,6 @@ import { Search, Bell, Home, ChevronRight, Check, Info, AlertCircle, Menu } from
 import { useLocation } from 'react-router-dom';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { useAuth } from '@features/auth';
 import {
     Popover,
     PopoverContent,

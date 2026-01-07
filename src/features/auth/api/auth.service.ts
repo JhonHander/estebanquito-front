@@ -18,11 +18,11 @@ interface LoginCredentials {
 }
 
 interface RegisterData {
-    firstName: string;
-    lastName: string;
+    accountNumber: string;
+    name: string;
     email: string;
     password: string;
-    confirmPassword: string;
+    type: string;
 }
 
 interface AuthResponse {
